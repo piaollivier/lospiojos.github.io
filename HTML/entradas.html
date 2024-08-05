@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/archivo.css">
+    <title>Entradas</title>
+</head>
+<body>
+    <div id="paginaCompleta">
+    <header>
+        <nav>
+            <ul id="menuNav">
+                <li id="liHome">
+                    <a href="../index.html">home</a>
+                    <ul id="ulHome">
+                        <li><a href="../index.html#historia">historia</a></li>
+                        <li id="liBanda"><a href="../index.html#banda">integrantes</a></li>
+                        <li><a href="../index.html#historiaRock">género</a></li> 
+                    </ul>
+                </li>
+                <li id="liDiscos">
+                    <a href="./discografia.html">mejores cd</a>
+                    <ul id="ulDiscos">
+                        <li><a href="./discografia.html#chactuchac">chactuchac</a></li>
+                        <li><a href="./discografia.html#tercerArco">3er arco</a></li>
+                        <li><a href="./discografia.html#maquinaSangre">máquina de sangre</a></li>
+                        <li><a href="./discografia.html#civilizacion">civilización</a></li>
+                    </ul>
+                </li>
+                <li id="liEntradas">
+                    <a href="./entradas.html">entradas</a></li>                
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="contenedor_entradas">
+            <h1>Los Piojos Vuelven con Todo</h1>
+            <div class="txt_entradas">
+                <p><strong>El momento tan esperado por todos los fanáticos llegó, después de 15 años de espera Los Piojos anunciaron su vuelta para hacer únicamente dos recitales en el Estadio Monumental de River Plate</strong>, el mismo lugar donde hicieron su último ritual en 2009. </br>
+                Prometen una noche llena de energía y recuerdos nostálgicos. Las entradas saldrán a la venta la próxima semana y se espera que vuelen rápido. </br> 
+                <em> Pero hay más buenas noticias,</em> desde nuestra web ofrecemos un beneficio exclusivo para quienes reserven sus entradas. Vas a recibir un enlace por correo electrónico ni bien estén disponibles las entradas para la compra. <strong>Además, al hacer tu reserva, participas automáticamente para ganar un meet and greet después del recital.</strong> Demostrá tu pasión por Los Piojos enviando una foto de tu "momento piojoso", puede ser desde un tatuaje, una foto con tus amigos en un ritual inolvidable, o incluso tu colección de entradas a lo largo de los años. Contanos una breve anécdota que explique por qué los amas y por qué deberías ser el ganador del meet and greet.
+                </p>
+            </div>
+        </div>   
+        <div class="h2_meet">
+         <h2>entradas y meet and greet</h2>    
+        </div>        
+        
+        <div class="contenedor_form">
+            <form action="./gracias.html" method="post" enctype="multipart/form-data">
+                <fieldset>
+                    <legend><h3>Datos Personales</h3></legend>
+                        <div class="contenedor_datos_pers">
+                        <div>
+                            <span>Nombre y Apellido:</span>
+                            <input type="text" name="nombre_completo" required autocomplete="off">
+                        </div>
+                        <div>
+                            <span>Fecha de Nacimiento:</span>
+                            <input type="date" name="fecha_nac" required autocomplete="off">
+                        </div>
+                        <div>
+                            <span>Mail:</span>
+                            <input type="email" name="mail" required autocomplete="off">
+                        </div>
+                        <div>
+                            <span>Whatsapp:</span>
+                            <input type="tel" name="telefono" required>
+                        </div>
+                    </div>
+                </fieldset>
+             <fieldset>
+                <legend><h3>Reserva tu entrada</h3></legend>
+                <div class="contenedor_entradas">
+                    <div><span>Seleccioná Show</span></div>
+                    <div>
+                        <div>
+                            <div>
+                            <label>
+                                
+                                   <input class="radio" type="radio" name="show" value="06/03/25"> 
+                                   <span>06/03/2025 21hs.</span> 
+                                
+                            </label>
+                            </div>
+                            <div>
+                            <label>
+                                
+                                    <input class="radio" type="radio" name="show" value="08/03/25"> 
+                                    <span>08/03/2025 21hs.</span> 
+                                
+                            </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <span>Cantidad de entradas:</span>   
+                        <input type="number" class="cant_entradas" name="cant_entradas" min="1" max="10" required>                       
+                    </div>
+                    <div>
+                        <span>Localidad:</span>
+                        <select name="localidad_estadio" required>
+                                <option disabled selected value="">Seleccioná localidad</option>
+                                <option value="campo_delanterop">Campo delantero</option>
+                                <option value="campo_trasero">Campo trasero</option>
+                                <option value="platea_pref">Platea preferencial</option>
+                                <option value="platea_lateral">Platea preferencial Visión lateral</option>
+                                <option value="platea_alta">Platea alta</option>
+                                <option value="sivori_media">Sívori media</option>
+                                <option value="sivori_alta">Sívori alta</option>
+                                <option value="cent_media">Centenario Media Visión Restringida</option>
+                                <option value="cent_alta">Centenario Alta Visión Restringida</option>
+                            </select>
+                        </div>
+                    </div>
+             </fieldset> 
+            
+             <fieldset>
+                <legend><h3>Momento piojoso</h3></legend>
+
+                <div class="cont_concurso">
+                    <div><span>Temas Favoritos:</span>
+                        <select name="temas_fav" multiple size="5" required>
+                            <option disabled selected>Presioná CTRL para más de 1</option>
+                            <optgroup label="A">
+                                <option value="agua">Agua</option>
+                                <option value="atardecer">Al atardecer</option>
+                                <option value="amor_perros">Amor de perros</option>
+                                <option value="ando_ganas">Ando ganas (llora, llora)</option>
+                                <option value="ay_ay_ay">Ay ay ay</option> 
+                            </optgroup>
+                            <optgroup label="B">
+                                <option value="babilonia">Babilonia</option>
+                                <option value="basta_penas">Basta de penas</option>
+                                <option value="bicho_ciudad">Bicho de ciudad</option>
+                                <option value="palomar">Buenos días Palomar</option>   
+                            </optgroup>
+                            <optgroup label="C">
+                                <option value="cancion_cuna">Canción de cuna</option>
+                                <option value="chactuchac">Chac tu chac</option>
+                                <option value="civilizacion">Civilización</option>
+                                <option value="como_ali">Como Ali</option>
+                                <option value="cruces_flores">Cruces y flores</option>
+                                <option value="cruel">Cruel</option>
+                            </optgroup>
+                            <OPtgroup label="D">
+                                <option value="desde_lejos">Desde lejos no se ve</option>
+                                <option value="dientes_cordero">Dientes de cordero</option>
+                                <option value="dificil">Difícil</option>  
+                            </OPtgroup>
+                            <OPtgroup label="E">
+                                <option value="farolito">El farolito</option>
+                            </OPtgroup>
+                            <optgroup label="F">
+                                <option value="fantasma">Fantasma</option>
+                                <option value="fijate">Fijate</option>                        
+                            </optgroup>
+                            <OPtgroup label="G">
+                                <option value="genius">Genius</option> 
+                            </OPtgroup>
+                            <optgroup label="L">
+                                <option value="mocosos">Los mocosos</option>
+                                <option value="luz_marfil">Luz de marfil</option>
+                            </optgroup>
+                            <optgroup label="M">
+                                <option value="marado">Maradó</option>
+                                <option value="morella">Morella</option>
+                                <option value="despacito">Muy despacito</option>
+                            </optgroup>
+                            <optgroup label="P">
+                                <option value="pacifico">Pacífico</option>   
+                            </optgroup>
+                            <optgroup label="R">
+                                <option value="ruleta">Ruleta</option>    
+                            </optgroup>
+                            <optgroup label="S">
+                                <option value="sudestada">Sudestada</option>   
+                            </optgroup>
+                            <optgroup label="T">
+                                <option value="tan_solo">Tan solo</option>
+                                <option value="taxi_boy">Taxi boy</option>
+                                <option value="te_diria">Te diría</option>
+                                <option value="todo_pasa">Todo pasa</option> 
+                            </optgroup>
+                            <optgroup label="V">
+                                <option value="verano_92">Verano del 92</option>
+                                <option value="vine_hasta_aqui">Vine hasta aquí</option>
+                            </optgroup>
+                            <optgroup label="Y">
+                                <option value="yira">Yira, yira</option>   
+                            </optgroup>
+                        </select></div>
+                    <div><span>Contanos tu anécdota</span>
+                        <textarea name="anecdota" placeholder="Anécdota Piojosa" required></textarea></div>   
+                    <div><span>Adjunta tu imagen</span>
+                        <input type="file" name="imagen" accept="jpg/png" required></div>    
+                 </div>
+        </fieldset>
+        <div>
+            <input type="submit" id="enviar" value="Enviar">
+            <input type="reset" id="borrar" value="Borrar">
+        </div>
+        </form>
+        </div>
+    </main>
+    <footer>
+        <div class="rrss_footer">
+            <div>
+                <h2>Redes sociales y Fan Page</h2>
+                <ul id="redes_ul">
+                    <li id="spotify"><a href="https://open.spotify.com/intl-es/artist/0SnyKkoyBaB2fG8IJH4xmU" target="_blank">SPOTIFY</a></li>
+                    <li id="yt"><a href="https://www.youtube.com/@Canalpiojoso" target="_blank">YOUTUBE</a></li>
+                    <li id="fb"><a href="https://www.facebook.com/profile.php?id=100052476909271" target="_blank">FACEBOOK</a></li>
+                    <li id="ig"><a href="https://www.instagram.com/lospiojosoficial/" target="_blank">INSTAGRAM</a></li>   
+                </ul>
+            </div> 
+        </div>
+        <div class="datos_footer">
+            <div>
+                <h2>Datos solicitados:</h2>
+                <ul class="datos_ul">
+                    <li>Nombre de autor: María Pía Ollivier</li>
+                    <li>Materia: Maquetado y desarrollo web</li>
+                    <li>Docente: Mabel Garcia</li>
+                    <li>Parcial: Final Escuela Da Vinci, Julio año 2024</li>
+                </ul>
+            </div> 
+        </div>
+    </footer>
+    </div>
+</body>

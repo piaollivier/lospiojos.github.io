@@ -1,0 +1,841 @@
+@font-face {
+    font-family: 'exothin';
+    src: url('../Fonts/webfontkit-20240617-153857/exo-variablefont_wght-webfont.eot');
+    src: url('../Fonts/webfontkit-20240617-153857/exo-variablefont_wght-webfont.eot?#iefix') format('embedded-opentype'),
+     url('../Fonts/webfontkit-20240617-153857/exo-variablefont_wght-webfont.woff2') format('woff2'),
+     url('../Fonts/webfontkit-20240617-153857/exo-variablefont_wght-webfont.woff') format('woff'),
+     url('../Fonts/webfontkit-20240617-153857/exo-variablefont_wght-webfont.svg#exothin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'los_piojosregular';
+    src: url('../Fonts/webfontkit-losPiojos/los_piojos-webfont.eot');
+    src: url('../Fonts/webfontkit-losPiojos/los_piojos-webfont.eot?#iefix') format('embedded-opentype'),
+     url('../Fonts/webfontkit-losPiojos/los_piojos-webfont.woff2') format('woff2'),
+     url('../Fonts/webfontkit-losPiojos/los_piojos-webfont.woff') format('woff'),
+     url('../Fonts/webfontkit-losPiojos/los_piojos-webfont.svg#los_piojosregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+html{
+    scroll-behavior: smooth;
+    
+}
+body{
+    margin: 0;
+    background-image: url(../IMG/piojo_everywhere.jpg);
+    background-position: center;
+    font-family: "exothin";
+    color:  white;
+
+}
+#paginaCompleta{
+    width: 1280px;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.90);
+
+}
+#principal{
+	width: 1000px;
+	padding: 10px;
+	margin: 10px auto;
+}
+.contenedor{
+    position: relative; 
+	margin: 0 auto; 
+}
+#ant{
+    background: url(../iconos/anterios.png);
+    background-position: 0 0;
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	left: 5px;
+	top: 273px;
+	font-size: 0px;
+	z-index:90;
+}
+#ant:hover{
+    background-position: 50px 0;
+	z-index:90;
+}
+#sig {
+    background: url(../iconos/siguiente.png);
+    background-position: 0 0;
+	width: 50px;
+	height: 50px;
+	display: inline-block;
+	position: absolute;
+	right: 5px;
+	top:  273px;
+	font-size: 0px;
+	z-index:90;
+}
+#sig:hover{
+    background-position: 50px 0;
+	z-index:90;
+}
+#fotos_index{
+    border-radius: 7px;
+    box-shadow: 1px 1px 8px whitesmoke;
+}
+nav{  
+    background-image: url(../IMG/logoPiojospsd.png);
+    background-repeat: no-repeat;
+	background-position:center top;
+    padding-top: 100px;
+    margin-bottom: 30px;
+}
+header{
+    background-color: rgba(31, 27, 27, 0.913);
+    position:sticky;
+	top:0px;
+	text-align:center;
+	padding:0;
+    margin:0;
+    z-index: 100;
+}
+#menuNav{
+    background-color:black;
+    margin-top: 20px;
+    text-transform:uppercase;
+    border-bottom: solid #df0000 1px;
+}
+li>ul{
+    text-transform: capitalize;  
+}
+#liHome, #liDiscos, #liBanda, #entradas{
+    position:relative;
+	display:inline-block; 
+    z-index: 5;
+}
+#ulHome, #ulDiscos, #ulBanda{
+    position:absolute;
+	padding-left:0px;
+	display:none;
+	margin:0px;
+	top:30px;
+	left:0px;
+    z-index: 1;
+}
+#ulHome li, #ulDiscos li{
+    margin: 0px;
+	position:relative;
+	border:solid 2px white;
+    padding: 8px;
+    text-align: left;
+    line-height: 22px;
+    letter-spacing: 1.5px;
+    background-color: black;
+    font-size: 17px;
+    text-decoration: none;
+    list-style: none;
+}
+#ulHome li a, #ulDiscos li a{
+	color:white;
+    margin-left: 5px;
+    text-align: start;  
+}
+#ulHome li a:hover, #ulDiscos li a:hover{
+    color: #df0000;
+}
+ul #liHome:hover #ulHome, ul #liDiscos:hover #ulDiscos{
+    display: block;
+    margin: 0;
+}
+a:hover{
+    color: #df0000;
+}
+#menuNav > #liHome, #liDiscos, #liEntradas{
+    display:inline-block;
+	padding:8px 0px;
+	background-color:black;
+	margin:7px 20px;
+	font-weight:bold;
+}
+a{
+	color:white; 
+    text-decoration:none;
+	width:110px;
+	display:inline-block;
+}
+.h1_index{
+    font-size: 0px;
+}
+#historia, #historiaRock, #chactuchac, #tercerArco, #maquinaSangre, #civilizacion{
+    scroll-margin-top:200px;
+    text-align: center;
+}
+#banda{
+    scroll-margin-top:200px;
+    text-align: center;
+}
+.contenedor_historia, .contenedor_entradas{
+    display: flex;
+    flex-direction: column;
+}
+.back_h1_index{
+    display: none;
+}
+.txt_principal, .txt_rockNac, .txt_entradas, .txt_gracias{
+    display: inline-block;
+}
+.txt_principal, .txt_rockNac > p{
+    font-weight: bold;
+    line-height: 22px;
+    letter-spacing: 1.5px;
+    font-size: 17px;
+    column-count: 3;
+    margin: 15px 30px;
+    padding: 10px 40px;
+    align-self: center;
+
+}
+.txt_entradas > p{
+    column-count: 2;
+    font-weight: bold;
+    line-height: 22px;
+    letter-spacing: 1.5px;
+    padding: 20px 50px;
+    text-align: start;
+}
+.main_gracias{
+    background-image: url(../IMG/saludo_recital.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 5px;
+    margin-top: -45px;
+}
+
+.h1_grax{
+    padding-top: 160px;
+}
+.txt_gracias > p{
+    letter-spacing: 1.5px;
+    font-weight: bold;
+    line-height: 22px;
+    border-radius: 8px;
+    margin: 20px 170px 190px;
+    padding: 20px 50px;
+    column-count: 1;
+}
+.img_discografia{
+	margin: auto;
+    display: block;
+}
+ .acordeon{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+ }
+ .div_integrantes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+ }
+ 
+ .div_integrantes>p{
+    letter-spacing: 1.5px;
+    line-height: 22px;
+    padding: 20px 50px;
+    width: 500px;
+    column-count: 1;
+ }
+.cont_decadasRock{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+.decadas_rock{
+    border-radius: 8px;
+    padding: 10px 70px;
+    margin: 10px 30px;
+}
+.li_decadas{
+    border: solid #555555 1px;
+    border-radius: 8px;
+    background-color: #333331;
+    list-style: none;
+    margin: 15px;
+}
+div > h3{
+    font-size: 20px;
+    font-weight: bold;
+}
+li > h3{
+    font-size: 20px;
+    font-weight:bold;
+}
+h3 ~ p{
+    text-align: start;
+    letter-spacing: 1.5px;
+    font-size: 17px;
+    line-height: 22px;
+    padding: 10px 25px;
+    margin-right: 20px;
+}
+li > img{
+    border-radius: 6px;
+    align-content: center;
+}
+
+footer{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+    border-top: #df0000 solid 1px;
+    background-color: rgb(15, 15, 15);
+}
+.rrss_footer{
+    display: flex;
+    justify-content:center;
+        
+}
+.rrss_footer>div>ul>li, .datos_footer>div>ul>li{
+    list-style: none;
+}
+.rrss_footer>div>ul>li{
+    display: inline-block;
+}
+.datos_footer>div>ul>li{
+    font-weight: bold;
+    line-height: 22px;
+    letter-spacing: 1.5px;
+    font-size: 15px;  
+}
+.rrss_footer h2{
+    display: flex;
+    margin: auto;
+    padding: 40px;
+    justify-content:center;
+    font-family: "exothin";
+    font-weight: bold;
+    font-size: 16px;
+}
+.redes_ul, .datos_ul{
+    list-style: none;
+}
+#redes_ul li a{
+    background-image: url(../iconos/iconos_spite.jpg);
+    border-radius: 50%;
+    margin: 20px;
+    width: 60px;
+    height:60px;
+    font-size: 0px;
+}
+#redes_ul #spotify a{background-position: -250px;}
+#redes_ul #spotify a:hover{background-position: 0;}
+#redes_ul #yt a{background-position: -315px;}
+#redes_ul #yt a:hover{background-position: -64px -1px;}
+#redes_ul #fb a{background-position: -380px;}
+#redes_ul #fb a:hover{background-position: -125px -1px;}
+#redes_ul #ig a{background-position: -445px;}
+#redes_ul #ig a:hover{background-position: -188px -1px;}
+.datos_footer{
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+    font-size: 16px;
+}
+.datos_footer h2{
+    display: flex;
+    margin: auto;
+    padding-bottom: 35px;
+    padding-top: 20px;
+    justify-content:center; 
+    font-family: "exothin";
+    font-weight: bold;
+    font-size: 16px;
+}
+h1, h2{
+    display: flex;
+    justify-content: center;
+    font-family: "los_piojosregular";
+    font-weight: lighter;
+    font-size: 55px;
+    text-align: center;
+    margin-bottom: 60px;
+    margin-top: 40px;
+}
+.cont__img{
+    display: flex;
+    flex-direction: column;
+}
+.fondo_secc_cd{
+    background-image:url(../IMG/back_cd_.webp) ;
+    background-repeat: no-repeat;
+    padding: 120px 0px;
+    margin-top: -50px;
+}
+
+.img_cd{
+    display: flex;
+    justify-content:space-around;
+}
+.a_img_cd{
+    display: flex;
+    width: 250px;
+    border-radius: 7px;
+}
+.a_img_cd>img{
+   border-radius: 5px; 
+   border: solid white 1px;
+}
+.a_img_cd:hover{
+    box-shadow: 1px 1px 6px whitesmoke;
+}
+.cont_pagina_cd{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.secc_descripcionCD{    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: black;
+    padding-bottom: 120px;
+}
+.ul_descripcionCD{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    background-color: black;
+    padding-inline-start: 0px;
+}
+.li_chactuchac, .li_tercerArco, .li_maquina, .li_civilizacion{
+    justify-content:flex-start;
+    border: #555555 2px solid;
+    background-color: rgb(15, 15, 15);
+    border-radius: 5px; 
+    width: 1180px;
+    margin-top: 50px;
+
+}
+.li_chactuchac>div>p, .li_tercerArco>div>p, .li_maquina>div>p, .li_civilizacion>div>p {
+    font-weight: bold;
+    line-height: 22px;
+    letter-spacing: 1.5px;
+    font-size: 17px;
+    text-align: start;
+    margin: 20px 60px;
+}
+
+.cont_top5_spoti{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    background-color: #333331;
+    border: solid 2px #555555;
+    border-radius: 5px;
+    margin: 50px;
+}
+.cont_top5_spoti>div>ol>li{
+    text-align: left;
+}
+.logo_spoti{
+    display: none;
+}
+div>h3{
+    text-align: center;
+}
+#chactuchac{
+    text-shadow: 3px 3px 3px rgb(216, 37, 67);
+}
+#tercerArco{
+    text-shadow: 3px 3px 3px rgba(204, 178, 33, 0.829);
+}
+#maquinaSangre{
+    text-shadow: 3px 3px 3px rgb(196, 58, 58);
+}
+#civilizacion{
+    text-shadow: 3px 3px 3px rgba(190, 159, 100, 0.884);
+} 
+.h2_meet{
+    background-color: black;
+    padding: 10px 0px;
+    margin-top: 70px;
+}
+iframe{
+    border:none;
+    width: 380px;
+    margin-top: 50px;
+}
+.contenedor_form{
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    align-content: center;
+    text-align: center;
+    background-color: black;
+}
+form{
+    display: inline-block;
+    align-items: center;
+    padding: 10px 150px;
+    border-radius: 10px;
+    font-size: 17px;
+}
+span{
+    display: inline-block;
+    width: 200px;
+    padding: 10px 50px;
+}
+.radio{
+    display: inline-block;
+    width: 10px;
+    margin: 30px ;  
+    font-size: 17px;  
+}
+fieldset{
+    display: block;
+    border-radius: 5px;
+    border: none;
+    text-align: start;
+    font-weight: bold;
+    width: 450px;
+    text-align: center;
+}
+legend{
+    text-align: center;  
+}
+legend>h3{
+    border-bottom: solid white 2px;
+    text-transform: uppercase;
+    text-align: justify;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    width: 1200px;
+    font-weight: bold;
+}
+.contenedor_datos_pers, .contenedor_entradas, .cont_consurso{
+    text-align: center;
+}
+div > span{
+    color: white;
+    text-align: start;
+}
+label{
+    width: 350px;
+}
+input{
+    align-items:center ;
+    width: 650px;
+    padding: 9px;        
+    margin: 9px 40px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    border-bottom: solid 2px #df0000;
+    background-color: rgba(31, 27, 27, 0.774);
+    outline: none;
+}
+textarea{
+    width: 1080px;
+    height: 200px;
+    border-radius: 5px;
+    margin: 9px 40px;
+    color: white;
+    border: none;
+    font-size: 18px;
+    border-bottom: solid 2px #df0000;
+    margin: 9px 0px;
+    background-color:rgba(31, 27, 27, 0.774 );
+    outline: none;
+    resize: none;
+}
+input:hover, textarea:hover{
+    background-color: rgba(39, 35, 35, 0.774);
+}
+.cant_entradas{
+    width: 60px;
+    margin-left: 3px;
+    font-size: 17px;
+}
+select{
+    width: 500px;
+    border-radius: 5px;
+}
+option, select{ 
+    border-radius: 5px;
+    color: white;
+    padding: 9px;
+    margin: 9px 0px;
+    font-size: 18px;
+    border: none;
+    outline: none;
+}
+select{
+    border-bottom: solid 2px #df0000;
+    background-color: rgba(31, 27, 27, 0.774);
+}
+
+#enviar, #borrar{
+    width: 320px;
+    margin: 80px 140px;
+    background-color: rgba(31, 27, 27, 0.774);
+    font-weight: bold;
+    font-size: 18px;
+    text-transform:uppercase;
+}
+#enviar:hover, #borrar:hover{
+    background-color: #363434;
+    border-bottom:solid 2px rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 480px){
+
+    body{
+        background-image: url(../IMG/fondo_responsive.webp);
+        background-color: rgba(2, 2, 2, 0.788);
+        width: 320px;
+        margin: auto;
+    }
+    #paginaCompleta{
+        width: 320px;
+        margin: auto;
+        background-color: black;
+    }
+
+    .txt_principal, .txt_rockNac>p, .txt_entradas>p, .txt_gracias>p{
+        column-count: 1;
+        font-size: 14px;
+        margin: 5px 10px;
+        padding: 2px 10px;
+        width: 280px;
+    }
+    .main_gracias{
+        background-image: none;
+        margin-top: 0px;
+        padding-top: 0px;
+    }
+    .txt_gracias{
+        padding-bottom: 70px;
+    }
+    h1, h2{
+        font-size: 30px;
+        padding: 0px 10px;
+        font-family:Arial, Helvetica, sans-serif;
+        text-transform: capitalize;
+        margin-bottom: 20px;
+    }
+    .h1_grax{
+        display: flex;
+        justify-content: center;
+        padding-top: 0px;
+    }
+    .back_h1_index{
+        display: block;
+        padding-top: 30px;
+    }
+    #principal, .contenedor {
+        display: none;
+    }
+    #menuNav{
+        padding: 10px;
+        font-size: 16px;
+    }
+    .decadas_rock{
+        border-radius: 8px;
+        padding: 10px 0px;
+        margin: 10px 0px;
+    }
+    .fondo_secc_cd{
+        background-image:url(../IMG/back_cd_\ chica.webp) ;
+        background-repeat:no-repeat;
+        padding: 8px;
+        margin-top: -40px;
+    }
+    h3~p{
+        display: flex;
+        justify-content: center;
+        font-size: 14px;
+        width: 260px;
+        padding: 5px;
+        margin: 10px;
+        line-height:20px;
+    }
+    .cont_top5_spoti{
+        width: 220px;
+        flex-direction: column;
+        background-color: rgb(15, 15, 15);
+        font-size: 14px;
+    }
+    .cont_top5_spoti>div>h3{
+        font-size: 17px;
+        text-align: start;
+        margin-left: 16px;
+    }
+    .ul_descripcionCD{
+        width: 320px;
+    }
+    .li_chactuchac, .li_tercerArco, .li_maquina, .li_civilizacion{
+        width: 320px;
+        border: none;
+        border-top: #555555 0.5px solid;
+        border-radius: 0%;
+        background-color: black;
+        margin-top: 0px;
+    }
+    #chactuchac, #tercerArco, #maquinaSangre, #civilizacion{
+        text-shadow: none;
+    }
+    iframe{
+    background-image: url(../iconos/iconos_spite.jpg);
+    background-repeat: no-repeat;
+    }
+    .iframe_c{
+        display: none;
+    }
+    .logo_spoti{
+        display: inline-block;
+        padding: 20px;
+    }
+    .cont__img{
+        display: none;
+    }
+    .acordeon{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+     }
+     .div_integrantes{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+     }
+     .div_integrantes>p{
+        letter-spacing: 1.5px;
+        line-height: 20px;
+        border-radius: 8px;
+        padding: 0px 0px;
+        font-size: 14px;
+        width: 200px;
+        font-family: Arial, Helvetica, sans-serif;
+     }
+
+    footer{
+        flex-direction:column;
+        border-top: solid 1px white;
+    }
+    #redes_ul li a{
+        background-image: url(../iconos/iconos_redes_chico.jpg);
+        border-radius: 50%;
+        margin: 20px 5px;
+        justify-content: center;
+        width: 40px;
+        height:40px;
+        font-size: 0px;
+    }
+    .rrss_footer div h2{
+        padding-bottom: 5px;
+    }
+    .rrss_footer div {
+        display: flex;
+        flex-direction: column;
+    }
+    .rrss_footer div ul{
+        display: flex;
+        padding-inline-start: 0px;
+    }
+    .rrss_footer div ul{
+        justify-content: space-around;
+    }
+    #redes_ul #spotify a{background-position: -173px;}
+    #redes_ul #yt a{background-position: -220px;}
+    #redes_ul #fb a{background-position: -265px;}
+    #redes_ul #ig a{background-position: -309px;}
+
+    .datos_footer{
+        border-top: solid 1px white;
+    }
+    .datos_footer div{
+        display: flex;
+        flex-direction: column;
+    }
+    .datos_footer div .datos_ul{
+        display: flex;
+        flex-direction: column;
+        font-size: 14px;
+        padding-bottom: 40px;
+
+    }
+    .datos_footer div .datos_ul li{
+        display: inline-block;
+        width: 230px;
+        font-size: 14px;
+        margin: 6px;
+    }
+    .contenedor_form{
+        padding: 0px;
+        width: 320px;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 320px;
+        font-size: 15px;
+        padding: 0px;
+    }
+    span{
+        display: inline-block;
+        padding: 20px;
+    }
+    .radio{
+        display: inline-block;
+        width: 10px;
+        margin: 0px ;  
+        font-size: 14px;  
+    }
+    fieldset{
+        display: flex;
+        flex-direction: column;
+        border-radius: 5px;
+        width: 300px;
+        padding: 10px 0px;
+        margin: 0px;
+    }
+
+    legend>h3{
+        width: 300px;
+        
+    }
+    input, textarea, label{
+        width: 300px;
+        margin:20px 0px ;
+    }
+    .cant_entradas{
+        width: 40px;
+        font-size: 14px;
+    }
+    option, select, textarea{
+        width: 300px;
+        margin:20px 0px ;
+        padding: 10px 0px;
+    }
+    textarea{
+        width: 310px;
+    }
+    #enviar, #borrar{
+        width: 200px;
+        font-size: 14px;
+ 
+        margin: 20px 40px;
+        padding: 15px;
+
+    }
+}
